@@ -17,6 +17,10 @@ class App extends React.Component {
     this.setState({ number: this.state.number - 1 });
   };
 
+  handleReset = () => {
+    this.setState({ number: 0 });
+  };
+
   render() {
     return (
       <div className="app">
@@ -24,6 +28,7 @@ class App extends React.Component {
         <div>
           <button onClick={this.handleIncrease}>Increase</button>
           <button onClick={this.handleDecrease}>Decrease</button>
+          <button onClick={this.handleReset}>Reset</button>
         </div>
       </div>
     );
